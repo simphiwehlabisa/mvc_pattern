@@ -1,5 +1,9 @@
 # MVC Pattern
 
+## 3.4.0
+ Apr. 09, 2019
+- Only dispose a Controller if no longer relied on by a view.
+
 ## 3.3.4
  Apr. 03, 2019
 - *Correction* Controllers and Listeners dispose calls in the StateMVC were not an issue after all.
