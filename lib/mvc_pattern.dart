@@ -499,6 +499,7 @@ abstract class StateMVC<T extends StatefulWidget> extends State<StatefulWidget>
         .forEach((ControllerMVC con) => con.didUpdateWidget(oldWidget));
     _afterList.forEach(
         (StateListener listener) => listener.didUpdateWidget(oldWidget));
+    _rebuildAllowed = true;
     super.didUpdateWidget(oldWidget);
 
     /// No 'setState()' functions are necessary
@@ -709,6 +710,7 @@ abstract class StateMVC<T extends StatefulWidget> extends State<StatefulWidget>
     _beforeList.forEach((StateListener listener) => listener.reassemble());
     _controllerList.forEach((ControllerMVC con) => con.reassemble());
     _afterList.forEach((StateListener listener) => listener.reassemble());
+    _rebuildAllowed = true;
     super.reassemble();
 
     /// No 'setState()' function is necessary
