@@ -1,3 +1,7 @@
+## 3.4.2
+ Apr. 23, 2019
+- if (_disposed) return; to prevent dispose() called more than once.
+
 ## 3.4.1
  Apr. 12, 2019
 - Return _rebuildAllowed = true; in didUpdateWidget() & reassemble()
